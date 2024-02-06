@@ -34,8 +34,21 @@ body {
     background-attachment: fixed;
   }
   
+  #app{
+    margin-top: 8rem;
+
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+    padding: 1.6rem;
+  }
+
   /* =============  Navigation ================ */
   nav {
+    position: absolute;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
@@ -43,8 +56,6 @@ body {
   
     border: solid #dedede;
     border-radius: 4rem;
-  
-    position: absolute;
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);

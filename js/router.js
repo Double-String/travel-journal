@@ -28,3 +28,5 @@ export class Router {
         console.log(route);
     }
 }
+
+export default Router;

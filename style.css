@@ -1,0 +1,72 @@
+/* Google Fonts Typography*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* HTML5 display-role reset for browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Global variables */
+:root {
+  --primary-color: #FFF;
+  --second-color: #E1E1E6;
+  --blue-color: #e6a6ff;
+
+  font-size: 62.5%;
+}
+
+/* Global */
+.hide {
+  display: none;
+}
+
+
+/* =============  Body  ================== */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /* =============  Navigation ================ */
+  nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.6rem;
+  
+    border: solid #dedede;
+    border-radius: 4rem;
+  
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    padding: 1.6rem;
+  }
+  
+  nav ul a {
+    color: var(--second-color);
+    margin-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  nav a:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--blue-color);
+    transition: ease-in 400ms;
+  }
+
+  nav #loguinha{
+    width: auto;
+    height: 4rem;
+  }

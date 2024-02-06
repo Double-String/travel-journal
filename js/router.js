@@ -5,26 +5,28 @@ export class Router {
         this.routes[routeName] = page;
     }
 
-    route(event){
+    route(event) {
         console.log("Route event activated")
         event = event || window.event;
         event.preventDefault();
-    
+
         window.history.pushState({}, "", event.target.href);
-    
+
         this.handle();
     }
 
-    handle(){
+    handle() {
         const { pathname } = window.location;
-        const route = this.routes[pathname] 
-    
+        const route = this.routes[pathname]
+
         fetch(route)
             .then(data => data.text())
             .then((html) => {
-            document.querySelector("#app").innerHTML = html;
+                document.querySelector("#app").innerHTML = html;
             });
-    
+
         console.log(route);
     }
 }
+
+export default Router;

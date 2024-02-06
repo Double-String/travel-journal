@@ -1,8 +1,8 @@
-import Router from "./router"
+import { Router } from './router.js'
 
 const router = new Router()
-router.add("/", "../pages/home.html")
-router.add("/about", "../pages/about.html")
+router.add("/", "/pages/home.html")
+router.add("/about", "/pages/about.html")
 
 router.handle()
 

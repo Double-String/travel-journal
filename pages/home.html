@@ -1,11 +1,13 @@
-<form action="/" method="post">
+<form id="journalForm">
     <ul>
-        <input type="text" placeholder="Location name" />
+        <input id="locationName" type="text" placeholder="Location name" />
     </ul>
-    <button id="addImage">Add images &#128248;</button>
     <ul>
-        <input type="text" placeholder="Add your notes here!" />
+        <input id="journalNotes" type="text" placeholder="Add your notes here!" />
     </ul>
-    <button id="addEntry">&#43;</button>
-  </form>
-  
+    <button type="button" id="addEntry">&#43;</button>
+</form>
+
+
+<!-- entries -->
+<div id="entriesContainer"></div>

@@ -34,23 +34,6 @@ body {
   background-attachment: fixed;
 }
 
-#app {
-  margin-top: 8rem;
-
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-
-
-  padding: 1.6rem;
-}
-
-#map {
-  flex: 1;
-  height: 120px;
-  max-width: 160px;
-}
 
 /* =============  Navigation ================ */
 nav {
@@ -88,18 +71,43 @@ nav #loguinha {
   height: 4rem;
 }
 
+/* =============  App content ================ */
+
+#app {
+  align-items: center;
+  display: flex;
+  justify-content: center; /* Center content horizontally inside the #app */
+  margin-top: 12rem;
+  position: absolute;
+  padding: 1.6rem;
+  text-align: center;
+  left: 0; /* Add this */
+  right: 0; /* And this */
+  margin-left: auto; /* And this */
+  margin-right: auto; /* And this */
+}
+
+
+/* =============  Map ================ */
+
+#container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 #card {
-  margin-top: 10%;
+  margin-top: 24rem;
   width: 30%;
   display: flex;
   align-items: center;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2)
 }
 
-#container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+#map {
+  flex: 1;
+  height: 120px;
+  max-width: 160px;
 }
 
 #card-txt {

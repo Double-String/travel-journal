@@ -1,3 +1,8 @@
+/* TailwindCSS*/
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 /* Google Fonts Typography*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -11,8 +16,9 @@
 /* CSS Global variables */
 :root {
   --primary-color: #FFF;
-  --second-color: #E1E1E6;
-  --blue-color: #e6a6ff;
+  --second-color: #bbbbbb;
+  --third-color: #282828;
+  --pink-color: #e6a6ff;
 
   font-size: 62.5%;
 }
@@ -49,26 +55,26 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 
-  padding: 1.6rem;
+  padding: 1.2rem;
 }
 
 nav ul a {
-  color: var(--second-color);
+  color: var(--third-color);
   margin-left: 20px;
   text-decoration: none;
   cursor: pointer;
 }
 
 nav a:hover {
-  color: var(--primary-color);
+  color: var(--third-color);
   font-weight: bold;
-  border-bottom: 2px solid var(--blue-color);
+  border-bottom: 2px solid var(--pink-color);
   transition: ease-in 400ms;
 }
 
 nav #loguinha {
   width: auto;
-  height: 4rem;
+  height: 3rem;
 }
 
 /* =============  App content ================ */
@@ -78,7 +84,7 @@ nav #loguinha {
   display: flex;
   justify-content: center; /* Center content horizontally inside the #app */
   margin-top: 12rem;
-  position: absolute;
+  position: relative;
   padding: 1.6rem;
   text-align: center;
   left: 0; /* Add this */
@@ -94,10 +100,10 @@ nav #loguinha {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 #card {
-  margin-top: 24rem;
   width: 30%;
   display: flex;
   align-items: center;
@@ -113,4 +119,53 @@ nav #loguinha {
 #card-txt {
   padding-left: 3%;
   padding-right: 3%;
+}
+
+
+#journalForm {
+  font-family: "Roboto", sans-serif;
+
+  border: 1.2px solid #dedede;
+  border-radius: 1.2rem;
+
+  width: 80%;
+  min-height: 8rem;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+#journalForm ul {
+  flex-direction: column;
+  margin-top: 0.6rem;
+}
+
+#journalForm .button-container {
+  display: flex;
+  justify-content: center
+}
+
+#journalForm .button-container button {
+  transition: filter 0.3s ease;
+}
+
+#journalForm .button-container button:hover {
+  filter: brightness(80%);
+}
+
+#journalForm button {
+  margin-top: 1rem;
+}
+
+#journalForm button#addEntry {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 0.8rem;
+}
+
+main.about-page{
+  font-family: "Roboto", sans-serif;
 }

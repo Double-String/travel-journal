@@ -1,14 +1,13 @@
-<form id="journalForm">
+<form id="journalForm" class="bg-white rounded-lg shadow p-6">
     <ul>
-        <input id="locationName" type="text" placeholder="Location name" />
+        <input id="locationName" type="text" placeholder="Location name" class="rounded-md bg-gray-100 p-2" />
     </ul>
     <ul>
-        <input id="journalNotes" type="text" placeholder="Add your notes here!" />
+        <input id="journalNotes" type="text" placeholder="Add your notes here!" class="rounded-md bg-gray-100 p-2" />
     </ul>
-    <button id="addPhoto">Add images &#128248;</button>
-    <button type="button" id="addEntry">&#43;</button>
-</form>
-
-
-<!-- entries -->
+    <div class="button-container">
+        <button id="addPhoto" class="rounded-md p-2 bg-gray-100 text-black">Add images &#128248;</button>
+        <button type="button" id="addEntry" class="rounded-full bg-gray-100 text-black text-sm">+</button>
+    </div>
+    <!-- entries -->
 <div id="entriesContainer"></div>

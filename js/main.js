@@ -5,6 +5,18 @@ export class JournalEntries {
         this.renderEntries();
     }
 
+    renderEntries() {
+        console.log('renderEntries is being called');
+        const entriesContainer = document.getElementById('entriesContainer');
+        entriesContainer.innerHTML = '';
+        this.entries.forEach(entry => {
+            const entryElement = document.createElement('div');
+            entryElement.textContent = `Location: ${entry.locationName}, Notes: ${entry.journalNotes}`;
+            entriesContainer.appendChild(entryElement);
+        });
+    }
+
+
     bindForm() {
         document.getElementById('addEntry').addEventListener('click', () => {
             const locationName = document.getElementById('locationName').value;
@@ -18,18 +30,21 @@ export class JournalEntries {
         });
     }
 
+
     add(entry) {
+        console.log('add is being called');
         this.entries = [entry, ...this.entries];
         this.update();
         this.save();
     }
 
-    save() {
-        localStorage.setItem('journalEntries', JSON.stringify(this.entries));
+    update() {
+        console.log('update is being called');
+        this.renderEntries();
     }
 
-    update() {
-        this.renderEntries();
+    save() {
+        localStorage.setItem('journalEntries', JSON.stringify(this.entries));
     }
 }
 

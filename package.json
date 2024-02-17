@@ -1,5 +1,23 @@
 {
   "dependencies": {
-    "leaflet": "^1.9.4"
+    "autoprefixer": "^10.4.17",
+    "leaflet": "^1.9.4",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.4.1"
+  },
+  "name": "simple-travel-journal",
+  "description": "## Goal Create an application where users can log their travel experiences with text, images, and locations. each entry is stored in localstorage.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss style.css -o output.css",
+    "start": "npm run build:css && live-server"
+  },
+  "author": "Daniela Passos",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0"
   }
 }
